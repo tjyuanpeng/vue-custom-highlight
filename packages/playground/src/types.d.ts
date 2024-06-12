@@ -1,3 +1,3 @@
 /// <reference types="vite/client" />
-
-declare module 'element-plus/dist/locale/zh-cn.mjs'
+/// <reference types="vite-plugin-pages/client" />
+/// <reference types="ant-design-vue/typings/global" />

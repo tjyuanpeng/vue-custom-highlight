@@ -1,6 +1,6 @@
 # vue-custom-highlight
 
-vue component with the CSS Custom Highlight API
+vue component using the CSS Custom Highlight API
 
 ## What is `CSS Custom Highlight API`
 

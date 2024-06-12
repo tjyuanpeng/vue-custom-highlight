@@ -1,5 +1,5 @@
 {
-  "name": "@vue-custom-highlight/root",
+  "name": "vue-custom-highlight",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -10,23 +10,12 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "pnpm -r --parallel run dev",
+    "start": "pnpm -r --parallel run start",
     "build": "pnpm --filter vue-custom-highlight run build",
     "publish": "pnpm --filter vue-custom-highlight publish"
   },
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
-    "eslint": "^8.27.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.7.0",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.12",
-    "vue": "^3.4.27"
+    "@types/node": "^20.14.0",
+    "prettier": "^3.3.0"
   }
 }

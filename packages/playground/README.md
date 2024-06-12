@@ -1,6 +1,4 @@
-# vue-custom-highlight
-
-vue component with the CSS Custom Highlight API
+# vue-custom-highlight playground
 
 ## Online Demo
 

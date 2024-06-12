@@ -9,7 +9,7 @@
   "tasks": {
     "dev": {
       "name": "dev",
-      "command": "pnpm dev",
+      "command": "pnpm start",
       "runAtStart": true,
       "preview": {
         "port": 9001

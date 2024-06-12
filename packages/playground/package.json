@@ -1,24 +1,23 @@
 {
-  "name": "@vue-custom-highlight/playground",
+  "name": "playground",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.2.0",
-    "@vitejs/plugin-vue-jsx": "^2.1.1",
-    "typescript": "^4.8.2",
-    "vite": "^3.0.9"
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.12",
+    "vite-plugin-pages": "^0.32.2"
   },
   "dependencies": {
-    "ant-design-vue": "^4.0.6",
-    "dayjs": "^1.11.10",
-    "element-plus": "^2.4.2",
+    "ant-design-vue": "^4.2.1",
+    "vue": "^3.4.27",
     "vue-custom-highlight": "workspace:*",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.3.2"
   }
 }
