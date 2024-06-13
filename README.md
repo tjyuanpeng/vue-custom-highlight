@@ -14,6 +14,8 @@ vue component using the CSS Custom Highlight API
 
 [https://codesandbox.io/p/github/tjyuanpeng/vue-custom-highlight](https://codesandbox.io/p/github/tjyuanpeng/vue-custom-highlight)
 
+[https://tjyuanpeng.github.io/vue-custom-highlight/](https://tjyuanpeng.github.io/vue-custom-highlight/)
+
 ## Packages Info
 
 - vue-custom-highlight: source code
