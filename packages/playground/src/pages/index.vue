@@ -2,8 +2,8 @@
 <template>
   <a-card class="main">
     <a-space direction="vertical">
-      <a-button href="/component">component</a-button>
-      <a-button href="/hook">hook</a-button>
+      <a-button @click="$router.push('/component')">component</a-button>
+      <a-button @click="$router.push('/hook')">hook</a-button>
     </a-space>
   </a-card>
 </template>
