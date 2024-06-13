@@ -22,7 +22,7 @@ vue component using the CSS Custom Highlight API
 ## Develop
 
 ```bash
-pnpm dev
+pnpm start
 ```
 
 open `http://localhost:9001/` to start
