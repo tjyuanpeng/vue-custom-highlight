@@ -23,7 +23,7 @@ const keys = () => {
 }
 </script>
 <template>
-  <a-card title="Use Case" class="main">
+  <a-card title="Hook" class="main">
     <a-row :gutter="24">
       <a-col :span="10">
         <a-form :label-col="{ span: 7 }">
