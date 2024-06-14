@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { message } from 'ant-design-vue'
-import { useCustomHighlight, version } from 'vue-custom-highlight'
+import { ref } from 'vue'
+import { Grid, message } from 'ant-design-vue'
+import { useCustomHighlight } from 'vue-custom-highlight'
 
-console.log(`version: ${version}`)
+const useBreakpoint = Grid.useBreakpoint
+const screens = useBreakpoint()
 
 const text = ref('debitis')
 const ignoreCase = ref(false)
 const uid = ref('chl-uid')
 
 const dom = ref<HTMLElement>()
-onMounted(async () => {})
 const { renderHighlight, clearHighlight, getHighlightKeys } = useCustomHighlight()
 const render = () => {
   const nodeList = Array.from(dom.value!.querySelectorAll<HTMLElement>('*'))
@@ -25,7 +25,7 @@ const keys = () => {
 <template>
   <a-card title="Hook" class="main">
     <a-row :gutter="24">
-      <a-col :span="10">
+      <a-col :span="screens.lg ? 10 : 24">
         <a-form :label-col="{ span: 7 }">
           <a-form-item label="Search Text">
             <a-input v-model:value="text" placeholder="Search Text" />
@@ -38,14 +38,14 @@ const keys = () => {
           </a-form-item>
           <a-form-item label="methods">
             <a-space direction="vertical">
-              <a-button @click="render">renderHighlight()</a-button>
-              <a-button @click="clear">clearHighlight()</a-button>
-              <a-button @click="keys">getHighlightKeys()</a-button>
+              <a-button @click="render">.renderHighlight()</a-button>
+              <a-button @click="clear">.clearHighlight()</a-button>
+              <a-button @click="keys">.getHighlightKeys()</a-button>
             </a-space>
           </a-form-item>
         </a-form>
       </a-col>
-      <a-col :span="14">
+      <a-col :span="screens.lg ? 14 : 24">
         <article ref="dom">
           <p>
             Maxime debitis hic, delectus perspiciatis laborum molestiae labore, deleniti, quam consequatur iure veniam
@@ -70,7 +70,6 @@ const keys = () => {
 <style scoped>
 .main {
   max-width: 1200px;
-  margin: 100px auto;
 }
 </style>
 <style>

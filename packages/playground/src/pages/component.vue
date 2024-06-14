@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import VueCustomHighlight, { version } from 'vue-custom-highlight'
+import { Grid } from 'ant-design-vue'
+import VueCustomHighlight from 'vue-custom-highlight'
 
-console.log(`version: ${version}`)
+const useBreakpoint = Grid.useBreakpoint
+const screens = useBreakpoint()
 
 const chl = ref<InstanceType<typeof VueCustomHighlight> | null>()
 const text = ref('debitis')
@@ -14,7 +16,7 @@ const visible = ref(false)
 <template>
   <a-card title="Component" class="main">
     <a-row :gutter="24">
-      <a-col :span="10">
+      <a-col :span="screens.lg ? 10 : 24">
         <a-form :label-col="{ span: 7 }">
           <a-form-item label="Search Text">
             <a-input v-model:value="text" placeholder="Search Text" />
@@ -32,14 +34,14 @@ const visible = ref(false)
             {{ chl?.$props.uid }}
           </a-form-item>
           <a-form-item label="methods">
-            <a-space>
+            <a-space direction="vertical">
               <a-button @click="chl?.renderHighlight">.renderHighlight()</a-button>
               <a-button @click="chl?.clearHighlight">.clearHighlight()</a-button>
             </a-space>
           </a-form-item>
         </a-form>
       </a-col>
-      <a-col :span="14">
+      <a-col :span="screens.lg ? 14 : 24">
         <VueCustomHighlight
           ref="chl"
           :text="text"
@@ -88,6 +90,5 @@ const visible = ref(false)
 <style scoped>
 .main {
   max-width: 1200px;
-  margin: 100px auto;
 }
 </style>

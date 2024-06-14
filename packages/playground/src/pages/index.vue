@@ -1,15 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { version } from 'vue-custom-highlight'
+
+console.log(`version: ${version}`)
+</script>
 <template>
-  <a-card class="main">
+  <a-card title="@vue-custom-highlight/playground" class="main">
     <a-space direction="vertical">
-      <a-button @click="$router.push('/component')">component</a-button>
-      <a-button @click="$router.push('/hook')">hook</a-button>
+      <a-button @click="$router.push('/component')">Component</a-button>
+      <a-button @click="$router.push('/hook')">Hook</a-button>
     </a-space>
   </a-card>
 </template>
 <style scoped>
 .main {
-  max-width: 1200px;
-  margin: 100px auto;
+  width: 100%;
+  max-width: 768px;
 }
 </style>
